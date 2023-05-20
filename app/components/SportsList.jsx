@@ -5,36 +5,44 @@ import {
   TabsBody,
   Tab,
   TabPanel,
-  Alert,
 } from "@material-tailwind/react";
 import {
-  Square3Stack3DIcon,
-  UserCircleIcon,
-  Cog6ToothIcon,
+  ClockIcon,
+  CalendarDaysIcon,
+  CalendarIcon,
+  TrophyIcon
 } from "@heroicons/react/24/solid";
 
 export default function SportsList(props) {
   const data = [
     {
-      label: "Dashboard",
-      value: "dashboard",
-      icon: Square3Stack3DIcon,
+      label: "In-Play",
+      value: "inplay",
+      icon: ClockIcon,
       desc: `It really matters and then like it really doesn't matter.
       What matters is the people who are sparked by it. And the people 
       who are like offended by it, it doesn't matter.`,
     },
     {
-      label: "Profile",
-      value: "profile",
-      icon: UserCircleIcon,
+      label: "Today",
+      value: "today",
+      icon: CalendarDaysIcon,
       desc: `Because it's about motivating the doers. Because I'm here
       to follow my dreams and inspire other people to follow their dreams, too.`,
     },
     {
-      label: "Settings",
-      value: "settings",
-      icon: Cog6ToothIcon,
+      label: "Tomorrow",
+      value: "tomorrow",
+      icon: CalendarIcon,
       desc: `We're not always in the position that we want to be at.
+      We're constantly growing. We're constantly making mistakes. We're
+      constantly trying to express ourselves and actualize our dreams.`,
+    },
+    {
+      label: "Leagues",
+      value: "leagues",
+      icon: TrophyIcon,
+      desc: `we want to be at.
       We're constantly growing. We're constantly making mistakes. We're
       constantly trying to express ourselves and actualize our dreams.`,
     },
@@ -42,12 +50,12 @@ export default function SportsList(props) {
   return (
     <div className="">
       <h1 className="text-pink-500 font-bold uppercase">{props.name}</h1>
-      <Tabs value="dashboard" orientation="vertical">
-        <TabsHeader className="w-40">
+      <Tabs value="inplay" orientation="vertical">
+        <TabsHeader className="w-24">
           {data.map(({ label, value, icon }) => (
-            <Tab key={value} value={value} className="place-items-start">
-              <div className="flex items-center gap-2">
-                {React.createElement(icon, { className: "w-5 h-5" })}
+            <Tab key={value} value={value} className="place-items-center">
+              <div className="grid gap-1">
+                {React.createElement(icon, { className: "w-12 h-12 mx-auto" })}
                 {label}
               </div>
             </Tab>
