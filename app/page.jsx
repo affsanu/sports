@@ -1,12 +1,14 @@
 'use client'
-import { Button } from '@material-tailwind/react'
 import React from 'react'
+import ImageSlider from './components/Carousel'
+import Headline from './components/Headline/Headline'
+import SportsBar from './components/SportsBar'
 
 const Home = () => {
   return (
-    <div>
-        <h1 className='flex justify-center text-2xl text-teal-500 font-bold'>Welcome To Next Js</h1>
-        <Button>Click Here</Button>
+    <div className='max-w-5xl mx-auto'>
+        <ImageSlider />
+        <SportsBar />
     </div>
   )
 }

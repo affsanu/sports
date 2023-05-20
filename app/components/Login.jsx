@@ -13,7 +13,6 @@ import {
 import {XMarkIcon} from '@heroicons/react/24/outline';
 
 export default function Login(props) {
-  console.log(props);
   return (
     <React.Fragment>
       <Dialog

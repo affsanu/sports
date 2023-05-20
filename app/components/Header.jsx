@@ -9,13 +9,9 @@ import {
   MenuList,
   MenuItem,
   Avatar,
-  Card,
 } from "@material-tailwind/react";
 import {
-  CubeTransparentIcon,
   UserCircleIcon,
-  CodeBracketSquareIcon,
-  Square3Stack3DIcon,
   ChevronDownIcon,
   InboxArrowDownIcon,
   LifebuoyIcon,
@@ -109,139 +105,6 @@ function ProfileMenu() {
   );
 }
 
-// nav list menu
-const navListMenuItems = [
-  {
-    title: "Exchange",
-    description:
-      "Learn how to use @material-tailwind/html, packed with rich components and widgets.",
-  },
-  {
-    title: "Sportsbook",
-    description:
-      "Learn how to use @material-tailwind/react, packed with rich components for React.",
-  },
-  {
-    title: "Virtual Sports",
-    description:
-      "A complete set of UI Elements for building faster websites in less time.",
-  },
-];
-
-function NavListMenu() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
-  const triggers = {
-    onMouseEnter: () => setIsMenuOpen(true),
-    onMouseLeave: () => setIsMenuOpen(false),
-  };
-
-  const renderItems = navListMenuItems.map(({ title, description }) => (
-    <a href="#" key={title}>
-      <MenuItem>
-        <Typography variant="h6" color="blue-gray" className="mb-1">
-          {title}
-        </Typography>
-        <Typography variant="small" color="gray" className="font-normal">
-          {description}
-        </Typography>
-      </MenuItem>
-    </a>
-  ));
-
-  return (
-    <React.Fragment>
-      <Menu open={isMenuOpen} handler={setIsMenuOpen}>
-        <MenuHandler>
-          <Typography as="a" href="#" variant="small" className="font-normal">
-            <MenuItem
-              {...triggers}
-              className="hidden items-center gap-2 text-blue-gray-900 lg:flex lg:rounded-full"
-            >
-              <Square3Stack3DIcon className="h-[18px] w-[18px]" /> Sports{" "}
-              <ChevronDownIcon
-                strokeWidth={2}
-                className={`h-3 w-3 transition-transform ${
-                  isMenuOpen ? "rotate-180" : ""
-                }`}
-              />
-            </MenuItem>
-          </Typography>
-        </MenuHandler>
-        <MenuList
-          {...triggers}
-          className="hidden w-[36rem] grid-cols-7 gap-3 overflow-visible lg:grid"
-        >
-          <Card
-            color="blue"
-            shadow={false}
-            variant="gradient"
-            className="col-span-3 grid h-full w-full place-items-center rounded-md"
-          >
-            <Image
-              src="/assets/images/exchange.png"
-              alt=" "
-              className="h-full w-full"
-              width={1000}
-              height={1000}
-            />
-          </Card>
-          <ul className="col-span-4 flex w-full flex-col gap-1">
-            {renderItems}
-          </ul>
-        </MenuList>
-      </Menu>
-      <MenuItem className="flex items-center gap-2 text-blue-gray-900 lg:hidden">
-        <Square3Stack3DIcon className="h-[18px] w-[18px]" /> Pages{" "}
-      </MenuItem>
-      <ul className="ml-6 flex w-full flex-col gap-1 lg:hidden">
-        {renderItems}
-      </ul>
-    </React.Fragment>
-  );
-}
-
-// nav list component
-const navListItems = [
-  {
-    label: "Casino",
-    icon: UserCircleIcon,
-    url: "/casino",
-  },
-  {
-    label: "Lottery",
-    icon: CubeTransparentIcon,
-    url: "/lottery",
-  },
-  {
-    label: "Promotions",
-    icon: CodeBracketSquareIcon,
-    url: "/promotion",
-  },
-];
-
-function NavList() {
-  return (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
-      <NavListMenu />
-      {navListItems.map(({ label, icon, url }, key) => (
-        <Typography
-          key={label}
-          as="a"
-          href={url}
-          variant="small"
-          color="blue-gray"
-          className="font-normal"
-        >
-          <MenuItem className="flex items-center gap-2 lg:rounded-full">
-            {React.createElement(icon, { className: "h-[18px] w-[18px]" })}{" "}
-            {label}
-          </MenuItem>
-        </Typography>
-      ))}
-    </ul>
-  );
-}
 
 export default function ComplexNavbar() {
   const [open, setOpen] = React.useState(false);
