@@ -2,7 +2,6 @@
 import React from "react";
 import {
   Navbar,
-  MobileNav,
   Typography,
   Button,
   Menu,
@@ -11,8 +10,6 @@ import {
   MenuItem,
   Avatar,
   Card,
-  IconButton,
-  Collapse,
 } from "@material-tailwind/react";
 import {
   CubeTransparentIcon,
@@ -20,32 +17,31 @@ import {
   CodeBracketSquareIcon,
   Square3Stack3DIcon,
   ChevronDownIcon,
-  Cog6ToothIcon,
   InboxArrowDownIcon,
   LifebuoyIcon,
   PowerIcon,
-  RocketLaunchIcon,
-  Bars2Icon,
+  BanknotesIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import Login from "./Login";
 
 // profile menu component
 const profileMenuItems = [
+  {
+    label: "Bank",
+    icon: BanknotesIcon,
+  },
   {
     label: "My Profile",
     icon: UserCircleIcon,
   },
   {
-    label: "Edit Profile",
-    icon: Cog6ToothIcon,
+    label: "Transaction",
+    icon: LifebuoyIcon,
   },
   {
     label: "Inbox",
     icon: InboxArrowDownIcon,
-  },
-  {
-    label: "Help",
-    icon: LifebuoyIcon,
   },
   {
     label: "Sign Out",
@@ -182,7 +178,13 @@ function NavListMenu() {
             variant="gradient"
             className="col-span-3 grid h-full w-full place-items-center rounded-md"
           >
-            <Image src="/assets/images/exchange.png" alt=" " className="h-full w-full" width={1000} height={1000} />
+            <Image
+              src="/assets/images/exchange.png"
+              alt=" "
+              className="h-full w-full"
+              width={1000}
+              height={1000}
+            />
           </Card>
           <ul className="col-span-4 flex w-full flex-col gap-1">
             {renderItems}
@@ -204,17 +206,17 @@ const navListItems = [
   {
     label: "Casino",
     icon: UserCircleIcon,
-    url: "/casino"
+    url: "/casino",
   },
   {
     label: "Lottery",
     icon: CubeTransparentIcon,
-    url: "/lottery"
+    url: "/lottery",
   },
   {
     label: "Promotions",
     icon: CodeBracketSquareIcon,
-    url: "/promotion"
+    url: "/promotion",
   },
 ];
 
@@ -242,45 +244,43 @@ function NavList() {
 }
 
 export default function ComplexNavbar() {
-  const [isNavOpen, setIsNavOpen] = React.useState(false);
-  const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
-
-  React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setIsNavOpen(false)
-    );
-  }, []);
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen((cur) => !cur);
 
   return (
-    <div className="">
+    <div className="flex justify-center mx-auto">
       <Navbar className="mx-auto max-w-screen-xl p-2 lg:rounded-full lg:pl-6 bg">
-        <div className="relative mx-auto flex items-center text-blue-gray-900">
+        <div className="relative mx-auto flex justify-between items-center text-blue-gray-900">
           <Typography
             as="a"
-            href="#"
+            href="/"
             className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
           >
-            MBET
+            <span className="uppercase text-bold text-pink-500">GLO</span>
+            <span className="uppercase text-bold text-cyan-500">WIN</span>
           </Typography>
-          <div className="absolute top-2/4 left-2/4 hidden -translate-x-2/4 -translate-y-2/4 lg:block">
-            <NavList />
-          </div>
-          <IconButton
-            size="sm"
-            color="blue-gray"
-            variant="text"
-            onClick={toggleIsNavOpen}
-            className="ml-auto mr-2 lg:hidden"
-          >
-            <Bars2Icon className="h-6 w-6" />
-          </IconButton>
-          <ProfileMenu />
+
+          {1 == 1 ? (
+            <div className="flex">
+              <Button onClick={handleOpen} variant="text" size="sm">
+                Login
+              </Button>
+              <Button variant="gradient" size="sm" color="pink">
+                Register
+              </Button>
+            </div>
+          ) : (
+            <div className="flex">
+              <Button variant="text" size="sm">
+                $0.00
+              </Button>
+              <ProfileMenu />
+            </div>
+          )}
         </div>
-        <Collapse open={isNavOpen} className="overflow-scroll">
-          <NavList />
-        </Collapse>
+        
       </Navbar>
+      <Login open={open} handleOpen={handleOpen} />
     </div>
   );
 }
