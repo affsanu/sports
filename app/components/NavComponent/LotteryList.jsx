@@ -41,7 +41,7 @@ export default function LotteryList() {
   return (
     <div className="">
       <h1 className="text-pink-500 font-bold uppercase">Live Casino</h1>
-      <Tabs value="catalog" orientation="vertical">
+      <Tabs value="thai" orientation="vertical">
         <TabsHeader className="w-24">
           {data.map(({ label, value, icon }) => (
             <Tab key={value} value={value} className="place-items-center">
