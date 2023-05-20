@@ -12,6 +12,9 @@ import {
   CalendarIcon,
   TrophyIcon
 } from "@heroicons/react/24/solid";
+import InplayCard from "../Card/Inplay";
+import Today from "../Card/Today";
+import Tomorrow from "../Card/Tomorrow";
 
 export default function SportsList() {
   const data = [
@@ -19,24 +22,19 @@ export default function SportsList() {
       label: "In-Play",
       value: "inplay",
       icon: ClockIcon,
-      card: `It really matters and then like it really doesn't matter.
-      What matters is the people who are sparked by it. And the people 
-      who are like offended by it, it doesn't matter.`,
+      card: <InplayCard />,
     },
     {
       label: "Today",
       value: "today",
       icon: CalendarDaysIcon,
-      card: `Because it's about motivating the doers. Because I'm here
-      to follow my dreams and inspire other people to follow their dreams, too.`,
+      card: <Today />,
     },
     {
       label: "Tomorrow",
       value: "tomorrow",
       icon: CalendarIcon,
-      card: `We're not always in the position that we want to be at.
-      We're constantly growing. We're constantly making mistakes. We're
-      constantly trying to express ourselves and actualize our dreams.`,
+      card: <Tomorrow />,
     },
     {
       label: "Leagues",
