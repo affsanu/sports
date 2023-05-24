@@ -17,12 +17,6 @@ export default function ImageSlider() {
       <div>
         <img loading="Lazy" src="/assets/images/banner2.jpg" alt=" " />
       </div>
-      <div>
-        <img loading="Lazy" src="/assets/images/banner3.png" alt=" " />
-      </div>
-      <div>
-        <img loading="Lazy" src="/assets/images/banner4.png" alt=" " />
-      </div>
     </Carousel>
   );
 }

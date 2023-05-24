@@ -2,7 +2,7 @@ import React from "react";
 
 const Headline = () => {
   return (
-    <div class="relative flex overflow-x-hidden border border-pink-600 rounded-b-sm opacity-50">
+    <div class="relative flex overflow-x-hidden text-black bg-cyan-400 border border-cyan-600 rounded-b-sm">
       <div class="py-2 animate-marquee whitespace-nowrap">
         <span class="mx-2">
           Welcome to glowin! Enjoy betting in match odds, Fancy & live casino.
