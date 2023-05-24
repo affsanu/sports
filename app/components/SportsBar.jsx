@@ -58,7 +58,7 @@ export default function SportsBar() {
             className={
               activeTab === value
                 ? "text-pink-500 uppercase font-bold"
-                : "uppercase"
+                : "uppercase hover:text-pink-200"
             }
           >
             {label}
