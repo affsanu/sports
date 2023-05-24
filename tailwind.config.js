@@ -12,6 +12,10 @@ module.exports = withMT({
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'ba-images': "url('/assets/images/bg.jpg')",
+        'footer-texture': "url('/img/footer-texture.png')",
+      },
       animation: {
         marquee: 'marquee 100s linear infinite',
       },
