@@ -11,6 +11,16 @@ const Headline = () => {
           Once player account found with fraudulent ticket, the respective
           market will be voided and the player account will be locked.
         </span>
+        <span class="mx-2">
+          Welcome to glowin! Enjoy betting in match odds, Fancy & live casino.
+        </span>
+        <span class="mx-2">
+          Once player account found with fraudulent ticket, the respective
+          market will be voided and the player account will be locked.
+        </span>
+        <span class="mx-2">
+          Welcome to glowin! Enjoy betting in match odds, Fancy & live casino.
+        </span>
       </div>
     </div>
   );
