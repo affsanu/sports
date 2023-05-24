@@ -11,6 +11,8 @@ import CasinoList from "./NavComponent/CasinoList";
 import SlotsList from "./NavComponent/SlotsList";
 import VirtualList from "./NavComponent/VirtualList";
 import LotteryList from "./NavComponent/LotteryList";
+import { MdSportsSoccer, MdSportsCricket } from "react-icons/md";
+import { GiSloth, GiGamepadCross, GiSpinningBlades } from "react-icons/gi";
 
 export default function SportsBar() {
   const [activeTab, setActiveTab] = React.useState("sports");
@@ -18,26 +20,31 @@ export default function SportsBar() {
     {
       label: "Sports",
       value: "sports",
+      icon: MdSportsSoccer,
       component: <SportsList />,
     },
     {
       label: "Casino",
       value: "casino",
+      icon: GiSloth,
       component: <CasinoList />,
     },
     {
       label: "Slots",
       value: "slots",
+      icon: GiGamepadCross,
       component: <SlotsList />,
     },
     {
       label: "Lottery",
       value: "lottery",
+      icon: GiSpinningBlades,
       component: <LotteryList />,
     },
     {
       label: "Virtual",
       value: "virtual",
+      icon: MdSportsCricket,
       component: <VirtualList />,
     },
   ];
@@ -50,7 +57,7 @@ export default function SportsBar() {
             "bg-transparent border-b-2 border-pink-500 shadow-none rounded-none",
         }}
       >
-        {data.map(({ label, value }) => (
+        {data.map(({ label, value, icon }) => (
           <Tab
             key={value}
             value={value}
@@ -61,7 +68,10 @@ export default function SportsBar() {
                 : "uppercase hover:text-pink-200"
             }
           >
-            {label}
+            <div className="grid gap-1">
+              {React.createElement(icon, { className: "w-12 h-12 mx-auto" })}
+              {label}
+            </div>
           </Tab>
         ))}
       </TabsHeader>
