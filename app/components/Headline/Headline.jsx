@@ -2,10 +2,10 @@ import React from "react";
 
 const Headline = () => {
   return (
-    <div class="relative flex overflow-x-hidden text-black bg-cyan-400 border border-cyan-600 rounded-b-sm">
-      <div class="py-2 animate-marquee whitespace-nowrap">
+    <div class="relative flex overflow-x-hidden text-black text-sm bg-cyan-400 border border-cyan-600 rounded-b-sm">
+      <div class="py-0 animate-marquee whitespace-nowrap">
         <span class="mx-2">
-          Welcome to glowin! Enjoy betting in match odds, Fancy & live casino.
+          *** Welcome to glowin! Enjoy betting in match odds, Fancy & live casino.***
         </span>
         <span class="mx-2">
           Once player account found with fraudulent ticket, the respective

@@ -40,13 +40,13 @@ export default function LotteryList() {
   ];
   return (
     <div className="">
-      <h1 className="text-pink-500 font-bold uppercase">Live Casino</h1>
+      <h1 className="text-pink-500 text-sm font-bold uppercase">Lottery Zone</h1>
       <Tabs value="thai" orientation="vertical">
-        <TabsHeader className="w-24">
+        <TabsHeader className="w-20 lg:w-24">
           {data.map(({ label, value, icon }) => (
             <Tab key={value} value={value} className="place-items-center">
-              <div className="grid gap-1">
-                {React.createElement(icon, { className: "w-12 h-12 mx-auto" })}
+              <div className="grid gap-1 text-xs">
+                {React.createElement(icon, { className: "w-8 h-8 lg:w-12 lg:h-12 mx-auto" })}
                 {label}
               </div>
             </Tab>

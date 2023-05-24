@@ -49,9 +49,9 @@ export default function SportsBar() {
     },
   ];
   return (
-    <Tabs value={activeTab}>
+    <Tabs value={activeTab} className="bg-gray-200">
       <TabsHeader
-        className="rounded-none border-b border-blue-gray-50 bg-transparent p-0"
+        className="rounded-none border-b border-blue-gray-200 bg-transparent p-0"
         indicatorProps={{
           className:
             "bg-transparent border-b-2 border-pink-500 shadow-none rounded-none",
@@ -68,8 +68,8 @@ export default function SportsBar() {
                 : "uppercase hover:text-pink-200"
             }
           >
-            <div className="grid gap-1">
-              {React.createElement(icon, { className: "w-12 h-12 mx-auto" })}
+            <div className="grid gap-1 text-sm">
+              {React.createElement(icon, { className: "w-6 h-6 lg:w-8 lg:h-8 mx-auto" })}
               {label}
             </div>
           </Tab>
