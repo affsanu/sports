@@ -1,35 +1,16 @@
-import React, { useEffect } from 'react';
+import React from "react";
 
 const Headline = () => {
-  useEffect(() => {
-    const marquee = document.querySelector('.marquee');
-    const container = document.querySelector('.marquee-container');
-
-    const textWidth = marquee.offsetWidth;
-    const containerWidth = container.offsetWidth;
-
-    const scroll = () => {
-      if (containerWidth < textWidth) {
-        marquee.style.transform = 'translateX(-100%)';
-        marquee.style.animation = `marquee ${textWidth / 50}s linear infinite`;
-      }
-    };
-
-    scroll();
-
-    // Recalculate scroll on window resize
-    window.addEventListener('resize', scroll);
-
-    // Cleanup
-    return () => {
-      window.removeEventListener('resize', scroll);
-    };
-  }, []);
-
   return (
-    <div className="marquee-container">
-      <div className="marquee">
-        <p>This is a running message created using Next.js. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque malesuada magna, ut convallis urna commodo at. Nulla hendrerit condimentum arcu, sit amet facilisis velit.</p>
+    <div class="relative flex overflow-x-hidden border border-pink-600 rounded-b-sm opacity-50">
+      <div class="py-2 animate-marquee whitespace-nowrap">
+        <span class="mx-2">
+          Welcome to glowin! Enjoy betting in match odds, Fancy & live casino.
+        </span>
+        <span class="mx-2">
+          Once player account found with fraudulent ticket, the respective
+          market will be voided and the player account will be locked.
+        </span>
       </div>
     </div>
   );

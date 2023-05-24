@@ -8,6 +8,7 @@ const Home = () => {
   return (
     <div className='max-w-5xl mx-auto'>
         <ImageSlider />
+        <Headline />
         <SportsBar />
     </div>
   )
