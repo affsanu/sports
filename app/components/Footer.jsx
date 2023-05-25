@@ -20,7 +20,7 @@ export default function Footer() {
           <li>
             <Typography
               as="a"
-              href="#"
+              href="policy"
               color="blue-gray"
               className="text-xs transition-colors hover:text-blue-500 focus:text-blue-500"
             >
@@ -30,7 +30,7 @@ export default function Footer() {
           <li>
             <Typography
               as="a"
-              href="#"
+              href="gambling"
               color="blue-gray"
               className="text-xs transition-colors hover:text-blue-500 focus:text-blue-500"
             >
@@ -40,11 +40,11 @@ export default function Footer() {
           <li>
             <Typography
               as="a"
-              href="#"
+              href="/term"
               color="blue-gray"
               className="text-xs transition-colors hover:text-blue-500 focus:text-blue-500"
             >
-              Terms and Conditions
+              Terms & Conditions
             </Typography>
           </li>
         </ul>
