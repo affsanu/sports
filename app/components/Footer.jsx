@@ -34,7 +34,7 @@ export default function Footer() {
               color="blue-gray"
               className="text-xs transition-colors hover:text-blue-500 focus:text-blue-500"
             >
-              Responsible Gambling
+              Gambling
             </Typography>
           </li>
           <li>
