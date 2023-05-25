@@ -123,7 +123,7 @@ export default function ComplexNavbar() {
             <span className="uppercase text-bold text-cyan-500">MO</span>
           </Typography>
 
-          {1 == 1 ? (
+          {1 == 2 ? (
             <div className="flex">
               <Button onClick={handleOpen} variant="text" size="sm">
                 Login
@@ -135,7 +135,7 @@ export default function ComplexNavbar() {
           ) : (
             <div className="flex">
               <Button variant="text" size="sm">
-                $0.00
+                <span>$100.00</span>
               </Button>
               <ProfileMenu />
             </div>

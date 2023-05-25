@@ -3,8 +3,8 @@ import { Button, Typography } from "@material-tailwind/react";
 
 export default function Footer() {
   return (
-    <footer className="container mx-auto bg-cyan-100 p-8">
-      <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 text-center md:justify-between">
+    <footer className="container mx-auto bg-blue-50 p-4 lg:rounded-t-md">
+      <div className=" flex flex-row flex-wrap items-center justify-center gap-y-3 gap-x-12 text-center md:justify-between">
         <Button
           size="sm"
           variant="gradient"
@@ -49,7 +49,7 @@ export default function Footer() {
           </li>
         </ul>
       </div>
-      <hr className="my-8 border-cyan-200" />
+      <hr className="my-3 border-cyan-200" />
       <Typography color="blue-gray" className="text-center text-sm">
         &copy; 2023 Demo. All Right Reserve.
       </Typography>
