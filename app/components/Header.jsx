@@ -119,8 +119,8 @@ export default function ComplexNavbar() {
             href="/"
             className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
           >
-            <span className="uppercase text-bold text-pink-500">GLO</span>
-            <span className="uppercase text-bold text-cyan-500">WIN</span>
+            <span className="uppercase text-bold text-pink-500">DE</span>
+            <span className="uppercase text-bold text-cyan-500">MO</span>
           </Typography>
 
           {1 == 1 ? (
