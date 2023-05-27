@@ -19,6 +19,7 @@ import {
   BanknotesIcon,
 } from "@heroicons/react/24/outline";
 import Login from "./Login";
+import Link from "next/link";
 
 // profile menu component
 const profileMenuItems = [
@@ -104,7 +105,6 @@ function ProfileMenu() {
   );
 }
 
-
 export default function ComplexNavbar() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen((cur) => !cur);
@@ -127,9 +127,11 @@ export default function ComplexNavbar() {
               <Button onClick={handleOpen} variant="text" size="sm">
                 Login
               </Button>
-              <Button variant="gradient" size="sm" color="pink">
-                Register
-              </Button>
+              <Link href="/register">
+                <Button variant="gradient" size="sm" color="pink">
+                  Register
+                </Button>
+              </Link>
             </div>
           ) : (
             <div className="flex">
@@ -140,7 +142,6 @@ export default function ComplexNavbar() {
             </div>
           )}
         </div>
-        
       </Navbar>
       <Login open={open} handleOpen={handleOpen} />
     </div>
