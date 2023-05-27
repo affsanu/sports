@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-[url('/assets/images/bg.jpg')] bg-contain">
+      <body className="min-h-screen bg-[url('/assets/images/bg.jpg')] bg-cover">
         <ThemeProvider>
           <Header />
           {children}
