@@ -16,12 +16,12 @@ export default function Login(props) {
   return (
     <React.Fragment>
       <Dialog
-        size="md"
+        size="sm"
         open={props.open}
         className="bg-transparent shadow-none"
       >
         <div className="flex justify-center">
-          <Card className="mx-auto min-w-[24rem]">
+          <Card className="mx-auto w-96">
             <CardHeader
               variant="gradient"
               color="pink"
@@ -39,8 +39,6 @@ export default function Login(props) {
                   reset password
                 </Button>
               </div>
-            </CardBody>
-            <CardFooter className="pt-0">
               <Button
                 color="pink"
                 variant="gradient"
@@ -49,8 +47,10 @@ export default function Login(props) {
               >
                 login now
               </Button>
-              <Typography variant="small" className="mt-6 flex justify-center">
-                Don&apos;t have an account?
+            </CardBody>
+            <CardFooter className="">
+              <Typography variant="small" className="flex justify-between items-center">
+                {' '} Or
                 <Typography
                   as="a"
                   href="/register"
@@ -60,10 +60,10 @@ export default function Login(props) {
                 >
                   Create Account
                 </Typography>
+                <Button onClick={props.handleOpen} variant="text" color="red" size="sm">
+                Close
+              </Button>
               </Typography>
-              <div>
-                <XMarkIcon onClick={props.handleOpen} className="h-6 w-6 text-red-400 cursor-pointer ring-2 ring-red-500 rounded-full shadow-lg"/>
-              </div>
             </CardFooter>
           </Card>
         </div>

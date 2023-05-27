@@ -18,13 +18,12 @@ import {
   PowerIcon,
   BanknotesIcon,
 } from "@heroicons/react/24/outline";
-import Image from "next/image";
 import Login from "./Login";
 
 // profile menu component
 const profileMenuItems = [
   {
-    label: "Bank",
+    label: "Cashbox",
     icon: BanknotesIcon,
   },
   {
@@ -123,7 +122,7 @@ export default function ComplexNavbar() {
             <span className="uppercase text-bold text-cyan-500">MO</span>
           </Typography>
 
-          {1 == 2 ? (
+          {1 == 1 ? (
             <div className="flex">
               <Button onClick={handleOpen} variant="text" size="sm">
                 Login
@@ -135,7 +134,7 @@ export default function ComplexNavbar() {
           ) : (
             <div className="flex">
               <Button variant="text" size="sm">
-                <span>$100.00</span>
+                <span className="text-orange-700">55.20 USD</span>
               </Button>
               <ProfileMenu />
             </div>
